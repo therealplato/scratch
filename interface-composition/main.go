@@ -1,7 +1,5 @@
 package main
 
-// halp!
-
 type d interface {
 	D()
 }
@@ -21,7 +19,6 @@ func (g *g) E() {}
 
 func main() {
 	var foo f = &g{}
-	f.D()
-	f.E()
-	_ = foo
+	foo.D()
+	foo.E()
 }
