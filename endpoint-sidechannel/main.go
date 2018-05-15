@@ -29,6 +29,8 @@ func main() {
 			fmt.Printf("main received channel communication from endpoint: %v\n", success)
 		}
 	}()
-	s := &http.Server{Addr: "127.0.0.1:8080", Handler: e}
+	addr := "127.0.0.1:8080"
+	fmt.Printf("listening %s\n", addr)
+	s := &http.Server{Addr: addr, Handler: e}
 	fmt.Println(s.ListenAndServe())
 }

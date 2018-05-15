@@ -1,5 +1,7 @@
 package main
 
+// halp!
+
 type d interface {
 	D()
 }
