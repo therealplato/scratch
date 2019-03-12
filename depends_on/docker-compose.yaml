@@ -1,0 +1,10 @@
+version: "2.1"
+services:
+  fast:
+    build:
+      context: ./fast
+    depends_on:
+      - slow
+  slow:
+    build:
+      context: ./slow
