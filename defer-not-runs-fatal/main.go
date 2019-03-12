@@ -3,14 +3,16 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 )
 
 func main() {
+	defer g()
 	f()
+	time.Sleep(1 * time.Second)
 }
 
 func f() {
-	defer g()
 	log.Fatal("asdf")
 }
 

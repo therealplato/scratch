@@ -32,5 +32,5 @@ func TestFooFatals(t *testing.T) {
 // should fatal every time
 func foo() {
 	log.Printf("oh my goodness, i see %q\n", os.Getenv("FATAL_TESTING"))
-	// log.Fatal("oh my gosh")
+	log.Fatal("oh my gosh")
 }

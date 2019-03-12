@@ -20,6 +20,6 @@ func f2(y *int) {
 func TestConcurrentRead(t *testing.T) {
 	go f1(&x)
 	go f2(&x)
-	// x = 1
+	x = 1
 	time.Sleep(time.Millisecond)
 }

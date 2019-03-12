@@ -44,8 +44,7 @@ func doWork(messages chan string) (err error) {
 		case e := <-errs:
 			fmt.Println("encountered error, canceling the doWork context:", e)
 			err = e
-			_ = cancel
-			// cancel()
+			cancel()
 		case <-workersFinished:
 			fmt.Println("all workers have finished")
 			return
