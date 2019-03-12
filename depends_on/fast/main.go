@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	res, err := http.Get("http://slow")
+	res, err := http.Get("http://slow:8080")
 	if err != nil {
 		log.Fatalf("get config request failed: %q", err)
 	}

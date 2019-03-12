@@ -4,12 +4,13 @@ services:
     build:
       context: ./fast
     depends_on:
-      - slow
+      slow:
+        condition: service_healthy
   slow:
     build:
       context: ./slow
     healthcheck:
       test: ["CMD", "curl", "-f", "http://slow:8080"]
-      interval: 1s
-      timeout: 2s
+      interval: 10s
+      timeout: 10s
       retries: 3
