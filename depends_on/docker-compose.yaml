@@ -8,3 +8,8 @@ services:
   slow:
     build:
       context: ./slow
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://slow:8080"]
+      interval: 1s
+      timeout: 2s
+      retries: 3
